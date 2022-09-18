@@ -74,3 +74,8 @@ Schema
 Stretch goals: 
 	Auth
 	Dark mode
+    replies to comments
+
+
+link to formal proposal: 
+https://docs.google.com/document/d/1M4eApLCOf_lIRlP-oI5JAFW39LEdPHVMNLyaPBadgX8/edit?usp=sharing
