@@ -13,14 +13,14 @@ function App() {
       <div className='wrapper'>
         <header className='header'> <Header/> </header>
         <aside className='sidebar'> <Sidebar/> </aside>
-        <div className='content'> <h1>Content</h1> </div>
-        <footer className='footer'> <h1>footer</h1> </footer>
-        {/* <h1>Future home of AnimeDB</h1>
+        <div className='content'> <h1>Content</h1> 
         <Outlet/>
         <Routes>
           <Route exact path="/" element={<Home/>}/>
           <Route exact path="/:id" element={<Show/>}/>
-        </Routes> */}
+        </Routes> 
+        </div>
+        <footer className='footer'> <h1>footer</h1> </footer>
       </div>
     </div>
   );

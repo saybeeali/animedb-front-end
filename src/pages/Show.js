@@ -1,13 +1,16 @@
 import anime from "../sample_data";
+import {useParams, Link} from "react-router-dom"
 
 function Show() {
+    const {id} = useParams()
+
     return (
       <div className="Show">
-        <h1>{anime[0].title}</h1>
-        <img src={anime[0].image}></img>
-        <p>medium: {anime[0].medium}</p>
-        <p>air dates: {anime[0].air_dates}</p>
-        <a href={anime[0].traiiler} target="_blank" rel="noreferrer">Trailer</a>
+        <h1>{anime[id-1].title}</h1>
+        <img src={anime[id-1].image}></img>
+        <p>medium: {anime[id-1].medium}</p>
+        <p>air dates: {anime[id-1].air_dates}</p>
+        <a target="_blank" rel="noreferrer" href ={`${anime[id-1].traiiler}`}> Trailer</a>
       </div>
     );
   }

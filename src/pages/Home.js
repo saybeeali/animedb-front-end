@@ -1,20 +1,24 @@
 import AnimeCard from "../components/AnimeCard";
-import anime from "../sample_data";
+import animeList from "../sample_data";
 
 function Home(props) {
+
+    
+    const loaded = (props) => {
+        return animeList.map((anime) => {
+            return (
+                <div className="animeIndex">
+                    <AnimeCard anime={anime}/>
+                </div>
+        )
+    })
+}
+
     return (
       <div className="Home">
-        <h1>This will be a list of anime</h1>
-        <AnimeCard anime={anime}/>
-        <AnimeCard anime={anime}/>
-        <AnimeCard anime={anime}/>
-        <AnimeCard anime={anime}/>
-        <AnimeCard anime={anime}/>
-        <AnimeCard anime={anime}/>
-        <AnimeCard anime={anime}/>
+        {animeList && animeList.length ? loaded() : loaded()}
       </div>
     );
-  }
+}
   
   export default Home;
-  

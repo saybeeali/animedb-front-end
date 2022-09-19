@@ -79,3 +79,6 @@ Stretch goals:
 
 link to formal proposal: 
 https://docs.google.com/document/d/1M4eApLCOf_lIRlP-oI5JAFW39LEdPHVMNLyaPBadgX8/edit?usp=sharing
+
+
+blockers: linking to external url OR embedding youtube video is challenging in react. we should experiement with both. 
