@@ -6,6 +6,11 @@
 
 .App {
   text-align: center;
+  background-color: black;
+}
+body{
+  color: rgb(231, 226, 200)
+  
 }
 .Nav {
   display: flex;
@@ -16,18 +21,19 @@
   display: grid;
   grid-template-areas:
   "header header"
-  "sidebar content"
-  "sidebar content"
+  "content content"
   "footer footer";
-  grid-template-rows: 1fr 6fr 1fr;
-  grid-template-columns: 250px 2fr;
+  grid-template-rows: 1fr 13fr 1fr;
+  background-color: black;
+  /* grid-template-columns: 250px 1fr; */
 }
 
 .header {
   grid-area: header;
   border: 1px solid yellow;
-  background-color: black;
   color: whitesmoke;
+  background-color: rgb(7, 22, 36);
+  /* width: 100%; */
   
 }
 .logo{
@@ -36,21 +42,15 @@
   font-family: Nabla;
   margin-left: 100px;
 }
-.sidebar {
-  grid-area: sidebar;
-  border: 1px solid yellow;
-  background-color: black;
-  color: whitesmoke;
-}
+
 .content {
   grid-area: content;
   border: 1px solid yellow;
-  background-color: black;
-  color: whitesmoke;
+  width: 75%;
+  background-color: rgb(7, 22, 36);
 }
 .footer{
   grid-area: footer;
   border: 1px solid yellow;
-  background-color: black;
-  color: whitesmoke;
+  background-color: rgb(7, 22, 36);
 }
