@@ -1,7 +1,10 @@
 import {useState, useEffect} from "react"
+import Login from "./Login"
 
+//need to create a user log in somewhere (should it be here or a separate page?)
+//either way, create a user login component and register component
 
-function Nav() {
+function Nav(props) {
 
 
   const [currentUser, setCurrentUser] = useState(null)
@@ -11,33 +14,37 @@ function Nav() {
   const getUser = async () => {
       try {
           const response = await fetch(backEndURL)
-          console.log(response)
+          //console.log(response)
           const thisUser = await response.json()
           setCurrentUser(thisUser)
       } catch (err) {
-          console.log(err)
+          //console.log(err)
       }
   }
 
 useEffect(() => {getUser()}, [])
 
 
-  const loading = () => {
+  const noUser = () => {
       return (
-          <h>loading</h>
+          <h>Welcome</h>
       )
   }
 
-  const loaded = (props) => {
+  const user = (props) => {
           return (
-              <p className="currentUser-display"> Hello {currentUser}</p>
+            <div className="loginField">
+              <p className="currentUser-display"> Welcome {currentUser}</p>
+            </div>
       )
-  }
-
-
-return (
-    <div className="currentUser-greeting">
-      {currentUser ? loaded() : loading()}
+      console.log(currentUser)
+    }
+    
+    
+    return (
+      <div className="currentUser-greeting">
+      <Login setCurrentUser = {setCurrentUser}/>
+      {currentUser ? user() : user()}
     </div>
   );
 }

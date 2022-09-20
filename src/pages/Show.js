@@ -8,14 +8,17 @@ function Show() {
     const [newAnime, setNewAnime] = useState(null)
     const thisAnimeURL = ""
 
+//once back end is deployed we can fill in the url
+//and use this function to fetch it
+
     const getThisAnime = async () => {
         try {
             const response = await fetch(thisAnimeURL)
-            console.log(response)
+            //console.log(response)
             const thisAnime = await response.json()
             setNewAnime(thisAnime)
         } catch (err) {
-            console.log(err)
+            //console.log(err)
         }
     }
 
@@ -28,7 +31,7 @@ function Show() {
     }
 
     const loaded = () => {
-
+//will have to adjust these keys based on the actual returned object
     return (
       <div className="Show">
         <h1>{anime[id-1].title}</h1>
@@ -39,7 +42,7 @@ function Show() {
       </div>
     );
   }
-
+//down here we'll change anime to {either newAnime or thisAnime}
   return (
     <div className = "show">
         {anime ? loaded(): loading()}
