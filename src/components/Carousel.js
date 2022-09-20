@@ -1,7 +1,7 @@
 function Carousel() {
     return (
       <div className="Carousel">
-        <h1>carousel</h1>
+        <h2>carousel</h2>
       </div>
     );
   }

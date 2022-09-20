@@ -1,4 +1,5 @@
 import AnimeCard from "../components/AnimeCard";
+
 import animeList from "../sample_data";
 import {useState, useEffect} from "react"
 
@@ -44,7 +45,9 @@ useEffect(() => {getAnime()}, [])
 //down here change animeList to newAnimeList or allAnime
     return (
       <div className="Home">
+      <div className="row row-cols-1 row-cols-md-4 g-4">
         {animeList && animeList.length ? loaded() : loading()}
+      </div>
       </div>
     );
 }
