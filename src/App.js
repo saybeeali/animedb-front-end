@@ -32,7 +32,6 @@ function App() {
         </div>
         </div>
         <footer className='footer container-fluid'> <h2>Footer</h2> </footer>
-        
       </div>
     </div>
   );

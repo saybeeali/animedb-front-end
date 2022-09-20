@@ -1,39 +1,55 @@
 import AnimeCard from "../components/AnimeCard";
-import anime from "../sample_data";
+
+import animeList from "../sample_data";
+import {useState, useEffect} from "react"
+
 
 function Home(props) {
+
+    const [newAnimeList, setNewAnimeList] = useState(null)
+
+    const animeURL = ""
+    //once we have the backend deployed we'll fill in the url here 
+    //and use it to fetch the data from the backend
+    const getAnime = async () => {
+        try {
+            const response = await fetch(animeURL)
+            //console.log(response)
+            const allAnime = await response.json()
+            setNewAnimeList(allAnime)
+        } catch (err) {
+            //console.log(err)
+        }
+    }
+
+useEffect(() => {getAnime()}, [])
+
+
+    const loading = () => {
+        return (
+            <h>loading</h>
+        )
+    }
+
+    const loaded = (props) => {
+        return animeList.map((anime, idx) => {
+            return (
+                <div className="animeIndex">
+                    <AnimeCard anime={anime}/>
+                </div>
+        )
+    })
+}
+
+ 
+//down here change animeList to newAnimeList or allAnime
     return (
       <div className="Home">
-        <h2>This will be a list of anime</h2>
       <div className="row row-cols-1 row-cols-md-4 g-4">
-        <div className="card">
-          <AnimeCard anime={anime}/>
-        </div>
-        <div className="card">
-          <AnimeCard anime={anime}/>
-        </div>
-        <div className="card">
-          <AnimeCard anime={anime}/>
-        </div>
-        <div className="card">
-          <AnimeCard anime={anime}/>
-        </div>
-        <div className="card">
-          <AnimeCard anime={anime}/>
-        </div>
-        <div className="card">
-          <AnimeCard anime={anime}/>
-        </div>
-        <div className="card">
-          <AnimeCard anime={anime}/>
-        </div>
-        <div className="card">
-          <AnimeCard anime={anime}/>
-          </div>
-        </div>
+        {animeList && animeList.length ? loaded() : loading()}
+      </div>
       </div>
     );
-  }
+}
   
   export default Home;
-  
