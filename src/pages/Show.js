@@ -1,8 +1,33 @@
 import anime from "../sample_data";
-import {useParams, Link} from "react-router-dom"
+import {useParams, useNavigate} from "react-router-dom"
+import {useState, useEffect} from "react"
 
 function Show() {
+
     const {id} = useParams()
+    const [newAnime, setNewAnime] = useState(null)
+    const thisAnimeURL = ""
+
+    const getThisAnime = async () => {
+        try {
+            const response = await fetch(thisAnimeURL)
+            console.log(response)
+            const thisAnime = await response.json()
+            setNewAnime(thisAnime)
+        } catch (err) {
+            console.log(err)
+        }
+    }
+
+    useEffect(() => {getThisAnime()}, [])
+
+    const loading = () => {
+        return (
+            <h1>loading</h1>
+        )
+    }
+
+    const loaded = () => {
 
     return (
       <div className="Show">
@@ -14,6 +39,13 @@ function Show() {
       </div>
     );
   }
-  
+
+  return (
+    <div className = "show">
+        {anime ? loaded(): loading()}
+    </div>
+  );
+}
+
   export default Show;
   

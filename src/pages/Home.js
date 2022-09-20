@@ -7,6 +7,7 @@ function Home(props) {
     const [newAnimeList, setNewAnimeList] = useState(null)
 
     const animeURL = ""
+    
     const getAnime = async () => {
         try {
             const response = await fetch(animeURL)
@@ -41,7 +42,7 @@ useEffect(() => {getAnime()}, [])
 
     return (
       <div className="Home">
-        {animeList && animeList.length ? loaded() : loaded()}
+        {animeList && animeList.length ? loaded() : loading()}
       </div>
     );
 }
