@@ -3,13 +3,12 @@ import Nav from "./Nav";
 
 
 function Header() {
-    return (
-      <div className="Header">
-        <a href="/" alt="home"><h1 className="logo">AnimeDB</h1></a>
+return (
+        <div className="Header">
+                <a className="hover-overlay" href="/" alt="home"><h1 className="logo">AnimeDB</h1></a>
         {/* <Nav/> */}
-      </div>
-    );
-  }
-  
-  export default Header;
-  
+        </div>
+);
+}
+
+export default Header;

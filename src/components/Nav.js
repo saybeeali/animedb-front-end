@@ -1,7 +1,7 @@
 
 import {useState, useEffect} from "react"
 import Login from "./Login"
-
+// import '../App.css';
 //need to create a user log in somewhere (should it be here or a separate page?)
 //either way, create a user login component and register component
 
@@ -28,7 +28,7 @@ useEffect(() => {getUser()}, [])
 
   const noUser = () => {
       return (
-          <h>Welcome</h>
+          <p className="welcome">Welcome</p>
       )
   }
 
