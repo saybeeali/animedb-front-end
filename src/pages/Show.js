@@ -1,6 +1,8 @@
 import anime from "../sample_data";
+
 import {useParams, useNavigate} from "react-router-dom"
 import {useState, useEffect} from "react"
+
 
 function Show() {
 
