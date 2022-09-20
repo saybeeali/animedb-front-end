@@ -2,20 +2,22 @@ import AnimeCard from "../components/AnimeCard";
 import animeList from "../sample_data";
 import {useState, useEffect} from "react"
 
+
 function Home(props) {
 
     const [newAnimeList, setNewAnimeList] = useState(null)
 
     const animeURL = ""
-    
+    //once we have the backend deployed we'll fill in the url here 
+    //and use it to fetch the data from the backend
     const getAnime = async () => {
         try {
             const response = await fetch(animeURL)
-            console.log(response)
+            //console.log(response)
             const allAnime = await response.json()
             setNewAnimeList(allAnime)
         } catch (err) {
-            console.log(err)
+            //console.log(err)
         }
     }
 
@@ -29,7 +31,7 @@ useEffect(() => {getAnime()}, [])
     }
 
     const loaded = (props) => {
-        return animeList.map((anime) => {
+        return animeList.map((anime, idx) => {
             return (
                 <div className="animeIndex">
                     <AnimeCard anime={anime}/>
@@ -39,7 +41,7 @@ useEffect(() => {getAnime()}, [])
 }
 
  
-
+//down here change animeList to newAnimeList or allAnime
     return (
       <div className="Home">
         {animeList && animeList.length ? loaded() : loading()}
