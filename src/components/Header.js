@@ -6,7 +6,7 @@ function Header() {
     return (
       <div className="Header">
         <h1 className="logo">AnimeDB</h1>
-        {/* <Nav/> */}
+        <Nav/>
       </div>
     );
   }
