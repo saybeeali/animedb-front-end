@@ -41,7 +41,7 @@ function Show() {
         <img src={anime[id-1].image}></img>
         <p>medium: {anime[id-1].medium}</p>
         <p>air dates: {anime[id-1].air_dates}</p>
-        <a target="_blank" rel="noreferrer" href ={`${anime[id-1].traiiler}`}> Trailer</a>
+        <a target="_blank" rel="noreferrer" href ={`${anime[id-1].trailer}`}> Trailer</a>
       </div>
     );
   }
