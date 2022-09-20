@@ -27,7 +27,7 @@ useEffect(() => {getAnime()}, [])
 
     const loading = () => {
         return (
-            <h>loading</h>
+            <h1>loading</h1>
         )
     }
 
@@ -53,3 +53,5 @@ useEffect(() => {getAnime()}, [])
 }
   
   export default Home;
+
+  

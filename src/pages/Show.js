@@ -1,4 +1,5 @@
 import anime from "../sample_data";
+import Comments from "../components/Comments";
 
 import {useParams, useNavigate} from "react-router-dom"
 import {useState, useEffect} from "react"
@@ -48,6 +49,7 @@ function Show() {
   return (
     <div className = "show">
         {anime ? loaded(): loading()}
+        <Comments />
     </div>
   );
 }
