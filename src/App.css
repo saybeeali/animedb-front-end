@@ -92,3 +92,13 @@ button {
 p {
   color: orange;
 }
+.currentUser-display {
+  font-size: 12px;
+  margin-top: 3px;
+}
+.anime-title {
+  margin-top: 10px;
+}
+.hover-overlay{
+  color: whitesmoke;
+}
