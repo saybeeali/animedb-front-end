@@ -1,7 +1,7 @@
 function Main() {
     return (
       <div className="Main">
-        <h1>This will be the main content of each page</h1>
+        <h2>This will be the main content of each page</h2>
       </div>
     );
   }

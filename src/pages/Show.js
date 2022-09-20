@@ -7,7 +7,7 @@ function Show() {
         <img src={anime[0].image}></img>
         <p>medium: {anime[0].medium}</p>
         <p>air dates: {anime[0].air_dates}</p>
-        <a href={anime[0].traiiler} target="_blank" rel="noreferrer">Trailer</a>
+        <a href={anime[0].trailer} target="_blank" rel="noreferrer">Trailer</a>
       </div>
     );
   }

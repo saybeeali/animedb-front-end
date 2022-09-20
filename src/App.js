@@ -1,5 +1,4 @@
 import Header from './components/Header';
-import Sidebar from './components/Sidebar';
 import Carousel from './components/Carousel';
 import Main from './components/Main';
 import Home from './pages/Home';
@@ -14,17 +13,26 @@ function App() {
       <div className='wrapper'>
         <header className='header container-fluid text-center'>
           <div className='row'>
-            <Header/> 
+            <div className='col-sm'>
+              <Header/>
+            </div>
+            <div className='col-lg'>
+              <Nav />
+            </div>
           </div>
         </header>
-        <div className='content container-fluid'> <Main /> </div>
-        <footer className='footer container-fluid'> <h1>footer</h1> </footer>
-        {/* <h1>Future home of AnimeDB</h1>
-        <Outlet/>
+        <div className='content container-fluid'> 
+          <Carousel/> 
+          <div className='animeList container-fluid'>
+          <Outlet/>
         <Routes>
           <Route exact path="/" element={<Home/>}/>
           <Route exact path="/:id" element={<Show/>}/>
-        </Routes> */}
+        </Routes>
+        </div>
+        </div>
+        <footer className='footer container-fluid'> <h2>Footer</h2> </footer>
+        
       </div>
     </div>
   );

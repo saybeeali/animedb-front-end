@@ -1,7 +1,8 @@
 function Nav() {
     return (
       <div className="Nav">
-        <h1>This will be the nav bar</h1>
+        <h1></h1>
+        
       </div>
     );
   }
