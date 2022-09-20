@@ -16,6 +16,7 @@ function Login(props) {
     }
 
     return (
+        <div className="login-form">
         <form onSubmit={handleSubmit}>
             <input type="text"
                 value={login.username}
@@ -31,6 +32,7 @@ function Login(props) {
             />
             <button type="submit" value="Login">Login</button>
         </form>
+        </div>
     )
 
 }
