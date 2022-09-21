@@ -6,10 +6,16 @@ import Nav from './components/Nav';
 import Footer from './components/Footer';
 import './App.css';
 import {Routes, Route, Outlet} from "react-router-dom"
+import { DataContext } from './data/DataContext';
+import {useState} from "react"
 
-function App() {
+function App(props) {
+  const [currentUser, setCurrentUser] = useState(null)
+  console.log(currentUser)
   return (
     <div className="App">
+            <p>{currentUser}</p>
+      <DataContext.Provider value={[currentUser, setCurrentUser]}>
       <div className='wrapper'>
         <header className='header container-fluid text-center'>
           <div className='row'>
@@ -35,6 +41,7 @@ function App() {
           <Footer />
         </footer>
       </div>
+      </DataContext.Provider>
     </div>
   );
 }
