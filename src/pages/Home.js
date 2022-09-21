@@ -47,7 +47,7 @@ useEffect(() => {
                     <Link to= {`/anime/${anime._id}` }>
                     <div>
                         <h1>{anime.title}</h1>
-                        <h2>{anime._id}</h2>
+                        
                     <img src= {anime.images.jpg.image_url}/>
                     </div>
                     </Link>

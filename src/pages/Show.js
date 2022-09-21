@@ -19,9 +19,9 @@ function Show() {
         fetch(thisAnimeURL)
         .then((res) => res.json())
         .then((json) => {
-            console.log(json)
+        
             setNewAnime(json)
-            console.log(newAnime)
+           
         })
         .catch(console.error)
     }, [])
@@ -32,33 +32,33 @@ function Show() {
     //     const handleClose = () => setShow(false);
     //     const handleShow = () => setShow(true);
 
-    // //     const url = new URL(link)
-    // //     console.log(url)
-    // //         return (
-    // //             <>
-    // //                 <Button variant="primary" onClick={handleShow}>
-    // //                     Play Trailer
-    // //                 </Button>
+    //     const url = new URL(newAnime.trailer.embed_url)
+    //     console.log(url)
+    //         return (
+    //             <>
+    //                 <Button variant="primary" onClick={handleShow}>
+    //                     Play Trailer
+    //                 </Button>
 
-    // //                 <Modal show={show} onHide={handleClose}>
-    // //                     <Modal.Title>{anime[id - 1].title}</Modal.Title>
-    // //                     <Modal.Body><iframe src={link} style={{ width: '100%', height: '400px' }} /></Modal.Body>
-    // //                     <Modal.Footer>
-    // //                         <Button variant="secondary" onClick={handleClose}>
-    // //                             Close
-    // //                         </Button>
-    // //                     </Modal.Footer>
-    // //                 </Modal>
-    // //             </>
-    // //         );
+    //                 <Modal show={show} onHide={handleClose}>
+    //                     <Modal.Title>{newAnime.title}</Modal.Title>
+    //                     <Modal.Body><iframe src={link} style={{ width: '100%', height: '400px' }} /></Modal.Body>
+    //                     <Modal.Footer>
+    //                         <Button variant="secondary" onClick={handleClose}>
+    //                             Close
+    //                         </Button>
+    //                     </Modal.Footer>
+    //                 </Modal>
+    //             </>
+    //         );
     // }
 
 
-    const loading = () => {
-        return (
-            <h1>loading</h1>
-        )
-    }
+    // const loading = () => {
+    //     return (
+    //         <h1>loading</h1>
+    //     )
+    // }
 
     const loaded = () => {
     //    const link = anime[id - 1].trailer
@@ -74,7 +74,7 @@ function Show() {
             //     {/* <img src={anime[id - 1].image}></img>
             //     <p>medium: {anime[id - 1].medium}</p>
             //     <p>air dates: {anime[id - 1].air_dates}</p> */}
-            //     {/* {LinkWrapper({link})} */}
+            
             // </div>)
             //  })}
             // </section>
@@ -83,15 +83,28 @@ function Show() {
     //down here we'll change anime to {either newAnime or thisAnime}
     return (
         <div className="show">
-            
-            <img src= {newAnime.images.jpg.image_url}/>
+            {/* <section className="container">
+                {newAnime.map((anime)=>{
+                    return(
+                        <img src= {anime.images.jpg.image_url}/>
+                    )
+                }
+                )}
+            </section> */}
+            {/* <img src= {newAnime.images.jpg.image_url}/> */}
             <h1>{newAnime.title}</h1>
             <h2>{newAnime.title_japanese}</h2>
-            
+            <h3>{newAnime.rating}</h3>
+                 
+                 <p>{newAnime.synopsis}</p>
+                
+
+
+
 
 
              
-            {newAnime ? loaded() : loading()}
+            {/* {newAnime ? loaded() : loading()} */}
             <Comments />
         </div>
     );
