@@ -6,11 +6,19 @@ import Nav from './components/Nav';
 import Footer from './components/Footer';
 import './App.css';
 import {Routes, Route, Outlet} from "react-router-dom"
+
 import Intro from './pages/Intro';
 
-function App() {
+import { DataContext } from './data/DataContext';
+import {useState} from "react"
+
+
+function App(props) {
+  const [currentUser, setCurrentUser] = useState(null)
+ console.log(currentUser)
   return (
     <div className="App">
+      <DataContext.Provider value={[currentUser, setCurrentUser]}>
       <div className='wrapper'>
         <header className='header container-fluid text-center'>
           <div className='row'>
@@ -33,8 +41,12 @@ function App() {
           <div className='animeList container-fluid'>
           <Outlet/>
         <Routes>
+
           <Route exact path="/home" element={<Home/>}/>
-          <Route exact path="/:id" element={<Show/>}/>
+     
+
+          <Route exact path="/anime/:id" element={<Show/>}/>
+
         </Routes>
         </div>
         </div>
@@ -42,6 +54,7 @@ function App() {
           <Footer />
         </footer>
       </div>
+      </DataContext.Provider>
     </div>
   );
 }
