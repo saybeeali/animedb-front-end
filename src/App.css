@@ -23,7 +23,7 @@ body{
   "header nav"
   "content content"
   "footer footer";
-  grid-template-rows: 100px 5fr 100px;
+  grid-template-rows: 70px 5fr 70px;
   background-color:rgba(7, 22, 36, .8);
   grid-template-columns: 100%;
 }
@@ -35,23 +35,23 @@ body{
   grid-area: header;
   border-bottom: 1px solid black;
   color: rgb(231, 226, 200);
-  background-color: rgb(7, 22, 36);
+  background-color: rgba(0, 0, 0, .8);
   grid-template-columns: 50% 50%;
-  
 }
 .logo{
   display: flex;
   flex-direction: row;
   font-family: Nabla;
   margin-left: 100px;
-  margin-top: 20px;
+  margin-top: 15px;
   cursor: pointer;
+  font-size: 28px;
 }
 
 .content {
   grid-area: content;
-  /* border: 1px solid  rgb(231, 226, 200); */
   width: 75%;
+  height: 86vh;
   background-color: rgb(7, 22, 36);
 }
 .footer{
@@ -74,4 +74,32 @@ h2 {
   align-items: center;
   background-color: rgb(7, 22, 36);
   width: 17rem;
+}
+.login-form {
+  margin-top: 15px;
+  margin-left: 200px;
+}
+input {
+  background-color: whitesmoke;
+}
+button {
+  background-color: transparent;
+  color:orange;
+  width: 100px;
+}
+p {
+  color: orange;
+}
+.currentUser-display {
+  font-size: 12px;
+  margin-top: 3px;
+}
+.anime-title {
+  margin-top: 10px;
+}
+.hover-overlay{
+  color: whitesmoke;
+}
+h1 {
+  color: whitesmoke;
 }

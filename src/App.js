@@ -1,9 +1,9 @@
 import Header from './components/Header';
 import Carousel from './components/Carousel';
-import Main from './components/Main';
 import Home from './pages/Home';
 import Show from './pages/Show';
 import Nav from './components/Nav';
+import Footer from './components/Footer';
 import './App.css';
 import {Routes, Route, Outlet} from "react-router-dom"
 
@@ -31,7 +31,9 @@ function App() {
         </Routes>
         </div>
         </div>
-        <footer className='footer container-fluid'> <h2>Footer</h2> </footer>
+        <footer className='footer container-fluid'> 
+          <Footer />
+        </footer>
       </div>
     </div>
   );
