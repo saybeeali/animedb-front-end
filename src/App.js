@@ -27,7 +27,7 @@ function App() {
           <Outlet/>
         <Routes>
           <Route exact path="/" element={<Home/>}/>
-          <Route exact path="/:id" element={<Show/>}/>
+          <Route exact path="/anime/:id" element={<Show/>}/>
         </Routes>
         </div>
         </div>

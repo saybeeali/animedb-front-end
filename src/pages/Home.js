@@ -1,5 +1,5 @@
 import AnimeCard from "../components/AnimeCard";
-
+import { Link } from "react-router-dom";
 
 import {useState, useEffect} from "react"
 
@@ -30,13 +30,9 @@ useEffect(() => {
     }
 
     const loaded = (props) => {
-        return newAnimeList.map((anime, idx) => {
-            return (
-                <div className="animeIndex">
-                    <AnimeCard anime={anime}/>
-                </div>
-        )
-    })
+    //     return newAnimeList.map((anime, idx) => {
+    //         return 
+    // })
 }
 
  
@@ -45,13 +41,16 @@ useEffect(() => {
       <div className="Home">
       <div className="row row-cols-1 row-cols-md-4 g-4">
         <section className="container">
-            {newAnimeList.map((anime)=>{
+            {newAnimeList.map((anime,id)=>{
+                // anime._id=id
                 return (
+                    <Link to= {`/anime/${anime._id}` }>
                     <div>
                         <h1>{anime.title}</h1>
+                        <h2>{anime._id}</h2>
                     <img src= {anime.images.jpg.image_url}/>
                     </div>
-                    
+                    </Link>
                 )
             }
             )}
