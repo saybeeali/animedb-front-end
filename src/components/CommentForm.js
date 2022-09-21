@@ -38,7 +38,7 @@ function CommentForm(props) {
         <h3>Add a comment</h3>
         <form onSubmit={handleSubmit}>
             <input
-                type="text"
+                type="hidden"
                 value={newForm.username}
                 name="username"
                 placeholder="username"

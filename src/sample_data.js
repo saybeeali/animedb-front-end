@@ -3,7 +3,7 @@ const anime = [
         title: "Fullmetal Alchemist: Brotherhood",
         image: "https://i.imgur.com/oe5RNDn.jpg",
         medium: "TV",
-        trailer: "https://youtu.be/-GoNo0DGroU",
+        trailer: "https://www.youtube.com/embed/--IcmZkvL0Q?enablejsapi=1&wmode=opaque&autoplay=1",
         air_dates: "4/2009-7/2010",
         id: 1
     },
