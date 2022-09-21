@@ -14,7 +14,6 @@ function AnimeCard(props) {
             <Link to={`/${props.anime.id}`}>
                 <img src={props.anime.image}></img>
             </Link>
-            </MDBRipple>
             <Link to={`/${props.anime.id}`}>
             <p className="anime-title">{props.anime.title}</p>
             </Link>

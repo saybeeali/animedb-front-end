@@ -38,7 +38,8 @@ function Show() {
             return (
                 <>
                     <Button variant="primary" onClick={handleShow}>
-                        Play Trailer
+                        {/* Play Trailer */}
+                        <img className="yt-icon" src="https://i.imgur.com/nhvu18j.png"></img>
                     </Button>
 
                     <Modal show={show} onHide={handleClose}>
@@ -50,6 +51,7 @@ function Show() {
                             </Button>
                         </Modal.Footer>
                     </Modal>
+                    
                 </>
             );
     }
@@ -62,7 +64,7 @@ function Show() {
     }
 
     const loaded = () => {
-       const link = anime[id - 1].trailer
+      const link = anime[id - 1].trailer
         //will have to adjust these keys based on the actual returned object
         return (
             <div className="Show">

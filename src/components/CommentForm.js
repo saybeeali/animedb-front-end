@@ -44,13 +44,13 @@ function CommentForm(props) {
                 placeholder="username"
                 onChange={handleChange}
             />
-               <input
+                <input
                 type="text"
                 value={newForm.content}
                 name="content"
                 onChange={handleChange}
             />
-            <button type="submit">Add Comment</button>
+            <button className="comment-btn" type="submit">Add Comment</button>
         </form>
       </div>
     );

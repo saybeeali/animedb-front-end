@@ -20,9 +20,13 @@ function App() {
               <Nav />
             </div>
           </div>
+          
         </header>
-        <div className='content container-fluid'> 
+        <div className='carousel container-fluid'>
           <Carousel/> 
+          </div>
+        <div className='content container-fluid'> 
+          
           <div className='animeList container-fluid'>
           <Outlet/>
         <Routes>
