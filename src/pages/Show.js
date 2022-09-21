@@ -65,15 +65,9 @@ function Show() {
     //    const link = anime[id - 1].trailer
         //will have to adjust these keys based on the actual returned object
         return (
+            <div>
             <div className="show">
-            {/* <section className="container">
-                {newAnime.map((anime)=>{
-                    return(
-                        <img src= {anime.images.jpg.image_url}/>
-                    )
-                }
-                )}
-            </section> */}
+            
             
             <img src= {newAnime.images.jpg.image_url}/>
             <h1>{newAnime.title}</h1>
@@ -81,18 +75,9 @@ function Show() {
             <h3>{newAnime.rating}</h3>
                  
                  <p>{newAnime.synopsis}</p>
-                
-
-<<<<<<< HEAD
-
-
-
-
-             
-            {/* {newAnime ? loaded() : loading()} */}
-            < Reviews/>
-        </div>
-=======
+                 
+                    <Reviews/>
+            </div>
             </div>
         )
            
@@ -104,10 +89,10 @@ function Show() {
             {newAnime && Object.keys(newAnime).length ? loaded() : loading()}
             </>
         
->>>>>>> 382c9efe76d9fd94eb0ed9d3708675d18b936e46
     );
 
     }
+
 export default Show;
    // const getAnime = async () => {
     //     try{
