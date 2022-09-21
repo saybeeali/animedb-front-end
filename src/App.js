@@ -6,6 +6,7 @@ import Nav from './components/Nav';
 import Footer from './components/Footer';
 import './App.css';
 import {Routes, Route, Outlet} from "react-router-dom"
+import Intro from './pages/Intro';
 
 function App() {
   return (
@@ -17,20 +18,22 @@ function App() {
               <Header/>
             </div>
             <div className='col-lg'>
-              <Nav />
+              {/* <Nav /> */}
             </div>
           </div>
-          
         </header>
+        <Routes>
+        <Route exact path="/" element={<Intro/>}/>
+        </Routes>
         <div className='carousel container-fluid'>
-          <Carousel/> 
-          </div>
+                <Carousel/> 
+            </div>
         <div className='content container-fluid'> 
           
           <div className='animeList container-fluid'>
           <Outlet/>
         <Routes>
-          <Route exact path="/" element={<Home/>}/>
+          <Route exact path="/home" element={<Home/>}/>
           <Route exact path="/:id" element={<Show/>}/>
         </Routes>
         </div>
