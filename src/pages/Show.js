@@ -42,7 +42,7 @@ function Show() {
                     </Button>
 
                     <Modal show={show} onHide={handleClose}>
-                        <Modal.Title>Link Popup</Modal.Title>
+                        <Modal.Title>{anime[id - 1].title}</Modal.Title>
                         <Modal.Body><iframe src={link} style={{ width: '100%', height: '400px' }} /></Modal.Body>
                         <Modal.Footer>
                             <Button variant="secondary" onClick={handleClose}>
@@ -71,7 +71,6 @@ function Show() {
                 <p>medium: {anime[id - 1].medium}</p>
                 <p>air dates: {anime[id - 1].air_dates}</p>
                 {LinkWrapper({link})}
-                <a target="_blank" rel="noreferrer" href={`${anime[id - 1].trailer}`}> Trailer</a>
             </div>
         );
     }
