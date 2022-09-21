@@ -1,74 +1,4 @@
 
-Team Organization
-
-Potential roles  for a 4 person team:
-
-Manager: can work on all parts, in charge of overseeing progress on all parts, researching new methods, debugging support, runs daily standups, plans sequencing
-
-Designer: styling, mainly collab w/ front end on jsx 
-
-Front end dev: all components, routes, etc. collabs w/ backend on mongo and API connections
-
-Backend dev: CRUD routes, schema, APIs, mongo, collabs w/ front end dev. 
-
-
-Workflow
-
-First steps:
-Set up and deploy a blank react app
-designer works on static rendering
-backend sets up schema, api access, mongo
-front end sets up components, etc w/ dummy data
-
-
-Next steps: 
-front and back end collaborate on any CRUD routes/ functions for one page at a time i.e. index first, then show, etc. 
-Front end and designer start to merge static styled sheets w/ front end jsx content, one page at a time.
-
-Post-MVP:
-Revisit first steps for any additional stretch features, repeat process
-
-Final steps: 
-Testing, edge cases, final debugs, polishing
-
-
-
-
-
-
-
-
-
-
-User Story
-
-IMDb for anime
-
-User can come to AnimeDB, look up different anime info pulled from an api, read comments, engage in discussion, read and write reviews, watch videos, etc. they can also add new anime data,, subject to admin edits and/or deletion.  
-
-Admins post main content pulled from APIs, manage user, comment, review and user-added content models, w/ all model instances stored on mongodb. 
-
-Requirements
-
-MINIMUM requirement:
-2 associated models minimum plus API integration plus:
-Robust component library
-User Auth as a stretch
-
-
-What models do we need: 
-
-“Users” (no auth)
-Schema
-Controller: create, delete routes
-
-Comments:
-schema
-Controller: index
-
-likes/ratings/reviews, etc 
-Schema 
-
 
 
 Stretch goals: 
@@ -82,5 +12,15 @@ link to formal proposal:
 https://docs.google.com/document/d/1M4eApLCOf_lIRlP-oI5JAFW39LEdPHVMNLyaPBadgX8/edit?usp=sharing
 
 
-blockers: linking to external url OR embedding youtube video is challenging in react. we should experiement with both. 
+change backend anime schema to grab the embed url from each entry
+
+need to add a user key to reviewSchema, so we can tie it to a user, whether there's auth or just the faux auth
+
+how to make currentuser a global state. will need it for comments, and if we have auth we'll need that anywayh
+
+get that ripple effect to work
+
+show page styling
+
+carousel
 

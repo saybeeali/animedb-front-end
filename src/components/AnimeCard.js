@@ -18,9 +18,10 @@ function AnimeCard(props) {
             <Link to={`/${props.anime.id}`}>
             <p className="anime-title">{props.anime.title}</p>
             </Link>
-        
-        
-        
+            <a href={props.anime.id}>
+        <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.2)' }}></div>
+        </a>
+        </MDBRipple>
         </div>
         
     );
