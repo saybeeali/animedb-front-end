@@ -1,4 +1,7 @@
 import AnimeCard from "../components/AnimeCard";
+
+import Carousel from "../components/Carousel";
+
 import { Link } from "react-router-dom";
 
 import {useState, useEffect} from "react"
@@ -35,9 +38,10 @@ useEffect(() => {
     // })
 }
 
- 
+
 //down here change animeList to newAnimeList or allAnime
     return (
+
       <div className="Home">
       {/* <div className="row row-cols-1 row-cols-md-4 g-4"> */}
         <section className="container">
@@ -76,4 +80,4 @@ useEffect(() => {
     //     }
     // }
 
-  
+

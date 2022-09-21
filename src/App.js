@@ -6,8 +6,12 @@ import Nav from './components/Nav';
 import Footer from './components/Footer';
 import './App.css';
 import {Routes, Route, Outlet} from "react-router-dom"
+
+import Intro from './pages/Intro';
+
 import { DataContext } from './data/DataContext';
 import {useState} from "react"
+
 
 function App(props) {
   const [currentUser, setCurrentUser] = useState(null)
@@ -22,17 +26,27 @@ function App(props) {
               <Header/>
             </div>
             <div className='col-lg'>
-              <Nav />
+              {/* <Nav /> */}
             </div>
           </div>
         </header>
+        <Routes>
+        <Route exact path="/" element={<Intro/>}/>
+        </Routes>
+        <div className='carousel container-fluid'>
+                <Carousel/> 
+            </div>
         <div className='content container-fluid'> 
-          <Carousel/> 
+          
           <div className='animeList container-fluid'>
           <Outlet/>
         <Routes>
-          <Route exact path="/" element={<Home/>}/>
+
+          <Route exact path="/home" element={<Home/>}/>
+     
+
           <Route exact path="/anime/:id" element={<Show/>}/>
+
         </Routes>
         </div>
         </div>

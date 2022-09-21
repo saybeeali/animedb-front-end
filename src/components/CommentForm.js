@@ -47,14 +47,26 @@ function CommentForm(props) {
     return (
       <div className="CommentForm">
         <h3>Add a comment</h3>
+
+        <form onSubmit={handleSubmit}>
+            <input
+                type="hidden"
+                value={newForm.username}
+                name="username"
+                placeholder="username"
+                onChange={handleChange}
+            />
+                <input
+
         <form onSubmit={testHandleSubmit}>
                <input
+
                 type="text"
                 value={newForm.content}
                 name="content"
                 onChange={handleChange}
             />
-            <button type="submit">Add Comment</button>
+            <button className="comment-btn" type="submit">Add Comment</button>
         </form>
       </div>
     );

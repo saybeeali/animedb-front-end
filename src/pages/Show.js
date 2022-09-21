@@ -33,6 +33,30 @@ function Show() {
     //     const handleClose = () => setShow(false);
     //     const handleShow = () => setShow(true);
 
+
+        const url = new URL(link)
+        console.log(url)
+            return (
+                <>
+                    <Button variant="primary" onClick={handleShow}>
+                        {/* Play Trailer */}
+                        <img className="yt-icon" src="https://i.imgur.com/nhvu18j.png"></img>
+                    </Button>
+
+                    <Modal show={show} onHide={handleClose}>
+                        <Modal.Title>{anime[id - 1].title}</Modal.Title>
+                        <Modal.Body><iframe src={link} style={{ width: '100%', height: '400px' }} /></Modal.Body>
+                        <Modal.Footer>
+                            <Button variant="secondary" onClick={handleClose}>
+                                Close
+                            </Button>
+                        </Modal.Footer>
+                    </Modal>
+                    
+                </>
+            );
+    }
+
     //     const url = new URL(newAnime.trailer.embed_url)
     //     console.log(url)
     //         return (
@@ -55,6 +79,7 @@ function Show() {
     // }
 
 
+
     const loading = () => (
        
             <h1>loading</h1>
@@ -62,7 +87,9 @@ function Show() {
     )
 
     const loaded = () => {
-    //    const link = anime[id - 1].trailer
+
+      const link = anime[id - 1].trailer
+
         //will have to adjust these keys based on the actual returned object
         return (
             <div>
@@ -94,18 +121,4 @@ function Show() {
     }
 
 export default Show;
-   // const getAnime = async () => {
-    //     try{
-    //         const res = await fetch(thisAnimeURL)
-    //         const data = await res.json()
-    //         console.log(data)
-    //         // setNewAnime(data.res[params])
-    //         // console.log(data.res[params])
-    //     } catch (error){
-    //         console.log(error)
-    //     }
-    //   }
-    
-    //   useEffect(() =>{
-    //     getAnime()
-    //   }, [])
+  

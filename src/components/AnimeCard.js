@@ -28,6 +28,9 @@ function AnimeCard(props) {
         className='bg-image hover-overlay'
         rippleTag='div'
 
+        rippleColor='light'
+        >
+
         </MDBRipple>
         </div>
         
