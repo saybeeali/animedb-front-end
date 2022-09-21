@@ -55,35 +55,17 @@ function Show() {
     // }
 
 
-    // const loading = () => {
-    //     return (
-    //         <h1>loading</h1>
-    //     )
-    // }
+    const loading = () => (
+       
+            <h1>loading</h1>
+        
+    )
 
     const loaded = () => {
     //    const link = anime[id - 1].trailer
         //will have to adjust these keys based on the actual returned object
-        return 
-            // <section className="show-container">
-            //     {newAnime.map((anime) => {
-            //         return(
-
-               
-            // <div className="Show">
-            //     <h1>{anime.title}</h1>
-            //     {/* <img src={anime[id - 1].image}></img>
-            //     <p>medium: {anime[id - 1].medium}</p>
-            //     <p>air dates: {anime[id - 1].air_dates}</p> */}
-            
-            // </div>)
-            //  })}
-            // </section>
-       // );
-    }
-    //down here we'll change anime to {either newAnime or thisAnime}
-    return (
-        <div className="show">
+        return (
+            <div className="show">
             {/* <section className="container">
                 {newAnime.map((anime)=>{
                     return(
@@ -92,7 +74,8 @@ function Show() {
                 }
                 )}
             </section> */}
-            {/* <img src= {newAnime.images.jpg.image_url}/> */}
+            
+            <img src= {newAnime.images.jpg.image_url}/>
             <h1>{newAnime.title}</h1>
             <h2>{newAnime.title_japanese}</h2>
             <h3>{newAnime.rating}</h3>
@@ -100,6 +83,7 @@ function Show() {
                  <p>{newAnime.synopsis}</p>
                 
 
+<<<<<<< HEAD
 
 
 
@@ -108,9 +92,22 @@ function Show() {
             {/* {newAnime ? loaded() : loading()} */}
             < Reviews/>
         </div>
+=======
+            </div>
+        )
+           
+    }
+    //down here we'll change anime to {either newAnime or thisAnime}
+    console.log(Object.keys(newAnime))
+    return (
+             <>
+            {newAnime && Object.keys(newAnime).length ? loaded() : loading()}
+            </>
+        
+>>>>>>> 382c9efe76d9fd94eb0ed9d3708675d18b936e46
     );
-}
 
+    }
 export default Show;
    // const getAnime = async () => {
     //     try{
