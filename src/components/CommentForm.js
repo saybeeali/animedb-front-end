@@ -56,7 +56,7 @@ function CommentForm(props) {
                 placeholder="username"
                 onChange={handleChange}
             />
-                <input
+          </form>
 
         <form onSubmit={testHandleSubmit}>
                <input

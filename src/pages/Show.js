@@ -33,66 +33,65 @@ function Show() {
     //     const handleClose = () => setShow(false);
     //     const handleShow = () => setShow(true);
 
+    
+        // const url = new URL(link)
+        // console.log(url)
+        //     return (
+        //         <>
+        //             <Button variant="primary" onClick={handleShow}>
+        //                 {/* Play Trailer */}
+        //                 <img className="yt-icon" src="https://i.imgur.com/nhvu18j.png"></img>
+        //             </Button>
 
-        const url = new URL(link)
-        console.log(url)
-            return (
-                <>
-                    <Button variant="primary" onClick={handleShow}>
-                        {/* Play Trailer */}
-                        <img className="yt-icon" src="https://i.imgur.com/nhvu18j.png"></img>
-                    </Button>
-
-                    <Modal show={show} onHide={handleClose}>
-                        <Modal.Title>{anime[id - 1].title}</Modal.Title>
-                        <Modal.Body><iframe src={link} style={{ width: '100%', height: '400px' }} /></Modal.Body>
-                        <Modal.Footer>
-                            <Button variant="secondary" onClick={handleClose}>
-                                Close
-                            </Button>
-                        </Modal.Footer>
-                    </Modal>
+        //             <Modal show={show} onHide={handleClose}>
+        //                 <Modal.Title>{anime[id - 1].title}</Modal.Title>
+        //                 <Modal.Body><iframe src={link} style={{ width: '100%', height: '400px' }} /></Modal.Body>
+        //                 <Modal.Footer>
+        //                     <Button variant="secondary" onClick={handleClose}>
+        //                         Close
+        //                     </Button>
+        //                 </Modal.Footer>
+        //             </Modal>
                     
-                </>
-            );
-    }
-
-    //     const url = new URL(newAnime.trailer.embed_url)
-    //     console.log(url)
-    //         return (
-    //             <>
-    //                 <Button variant="primary" onClick={handleShow}>
-    //                     Play Trailer
-    //                 </Button>
-
-    //                 <Modal show={show} onHide={handleClose}>
-    //                     <Modal.Title>{newAnime.title}</Modal.Title>
-    //                     <Modal.Body><iframe src={link} style={{ width: '100%', height: '400px' }} /></Modal.Body>
-    //                     <Modal.Footer>
-    //                         <Button variant="secondary" onClick={handleClose}>
-    //                             Close
-    //                         </Button>
-    //                     </Modal.Footer>
-    //                 </Modal>
-    //             </>
-    //         );
-    // }
-
-
-
-    const loading = () => (
-       
-            <h1>loading</h1>
-        
-    )
-
-    const loaded = () => {
-
-      const link = anime[id - 1].trailer
-
-        //will have to adjust these keys based on the actual returned object
-        return (
-            <div>
+        //         </>
+        //     );
+            
+            //     const url = new URL(newAnime.trailer.embed_url)
+            //     console.log(url)
+            //         return (
+                //             <>
+                //                 <Button variant="primary" onClick={handleShow}>
+                //                     Play Trailer
+                //                 </Button>
+                
+                //                 <Modal show={show} onHide={handleClose}>
+                //                     <Modal.Title>{newAnime.title}</Modal.Title>
+                //                     <Modal.Body><iframe src={link} style={{ width: '100%', height: '400px' }} /></Modal.Body>
+                //                     <Modal.Footer>
+                //                         <Button variant="secondary" onClick={handleClose}>
+                //                             Close
+                //                         </Button>
+                //                     </Modal.Footer>
+                //                 </Modal>
+                //             </>
+                //         );
+                // }
+                
+                
+                
+                const loading = () => (
+                    
+                    <h1>loading</h1>
+                    
+                    )
+                    
+                    const loaded = () => {
+                        
+                        //const link = anime[id - 1].trailer
+                        
+                        //will have to adjust these keys based on the actual returned object
+                        return (
+                            <div>
             <div className="show">
             
             
@@ -107,18 +106,19 @@ function Show() {
             </div>
             </div>
         )
-           
+        
     }
     //down here we'll change anime to {either newAnime or thisAnime}
     console.log(Object.keys(newAnime))
     return (
-             <>
+        <>
             {newAnime && Object.keys(newAnime).length ? loaded() : loading()}
             </>
         
-    );
-
+        );
+        
+        
     }
-
-export default Show;
-  
+        
+        export default Show;
+        
