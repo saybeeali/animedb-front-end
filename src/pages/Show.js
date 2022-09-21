@@ -4,6 +4,7 @@ import { Modal, Button } from "react-bootstrap";
 import { HOSTNAME } from "../environment";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import Reviews from "../components/Reviews";
 
 
 function Show() {
@@ -105,7 +106,7 @@ function Show() {
 
              
             {/* {newAnime ? loaded() : loading()} */}
-            <Comments />
+            < Reviews/>
         </div>
     );
 }
