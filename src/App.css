@@ -103,3 +103,13 @@ p {
 h1 {
   color: whitesmoke;
 }
+.container {
+  border:10px solid rgb(1, 1, 53);
+  display:flex;
+  flex-wrap: wrap;
+}
+.anime-card {
+  border:5px solid whitesmoke;
+  margin:10px;
+
+}
