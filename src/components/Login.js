@@ -11,7 +11,7 @@ function Login() {
     
     const handleSubmit = (e) => {
         e.preventDefault()
-        dataContext.setCurrentUser(...dataContext.currentUser, login.username)
+        dataContext[1](login.username)
         console.log(dataContext)
         setLogin({username: "", password: ""})
     }
@@ -19,6 +19,7 @@ function Login() {
 
     return (
         <div className="login-form">
+            <p>{dataContext.currentUser}</p>
         <form onSubmit={handleSubmit}>
             <input type="text"
                 value={login.username}

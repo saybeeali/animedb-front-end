@@ -11,10 +11,9 @@ import {useState} from "react"
 
 function App(props) {
   const [currentUser, setCurrentUser] = useState(null)
-  console.log(currentUser)
+ console.log(currentUser)
   return (
     <div className="App">
-            <p>{currentUser}</p>
       <DataContext.Provider value={[currentUser, setCurrentUser]}>
       <div className='wrapper'>
         <header className='header container-fluid text-center'>

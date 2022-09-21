@@ -8,7 +8,7 @@ import Login from "./Login"
 
 function Nav() {
 
-  const dataContext = useContext(DataContext);
+  const [user, setUser] = useContext(DataContext);
 
   const backEndURL = ""
 
@@ -17,7 +17,7 @@ function Nav() {
           const response = await fetch(backEndURL)
           //console.log(response)
           const thisUser = await response.json()
-          dataContext.setCurrentUser(thisUser)
+          //dataContext.setCurrentUser(thisUser)
       } catch (err) {
           //console.log(err)
       }
@@ -32,10 +32,10 @@ useEffect(() => {getUser()}, [])
       )
   }
 
-  const user = (props) => {
+  const yesUser = () => {
           return (
             <div className="loginField">
-              <p className="currentUser-display"> Welcome {dataContext[0]}</p>
+              <p className="currentUser-display"> Welcome {user}</p>
             </div>
       )
       //console.log(dataContext[0])
@@ -44,8 +44,8 @@ useEffect(() => {getUser()}, [])
     
     return (
       <div className="currentUser-greeting">
-      <Login setCurrentUser = {dataContext[0]}/>
-      {dataContext[0] ? user() : user()}
+      <Login  />
+      {user ? yesUser() : noUser()}
     </div>
   );
 }
