@@ -1,6 +1,5 @@
 import Header from './components/Header';
 import Carousel from './components/Carousel';
-import Main from './components/Main';
 import Home from './pages/Home';
 import Show from './pages/Show';
 import Nav from './components/Nav';

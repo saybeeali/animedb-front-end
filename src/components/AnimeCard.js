@@ -6,13 +6,15 @@ function AnimeCard(props) {
         
         <div className="AnimeCard">
             <MDBRipple
-        className='bg-image hover-overlay shadow-1-strong rounded'
+        className='bg-image hover-overlay'
         rippleTag='div'
         rippleColor='light'
         >
+            <div className='mask'></div>
             <Link to={`/${props.anime.id}`}>
                 <img src={props.anime.image}></img>
             </Link>
+            </MDBRipple>
             <Link to={`/${props.anime.id}`}>
             <p className="anime-title">{props.anime.title}</p>
             </Link>
