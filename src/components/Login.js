@@ -1,11 +1,12 @@
 import { useState, useEffect, useContext } from "react"
 import { DataContext} from '../data/DataContext';
 
-function Login() {
+function Login(props) {
 
-    const dataContext = useContext(DataContext);
 
     const [login, setLogin] = useState({ username: "", password: "" });
+    
+
     
     const handleChange = (e) => {
         setLogin({ ...login, [e.target.name]: e.target.value });
@@ -13,15 +14,13 @@ function Login() {
     
     const handleSubmit = (e) => {
         e.preventDefault()
-        dataContext[1](login.username)
-        console.log(dataContext)
+        props.setCurrentUser(login.username)
         setLogin({username: "", password: ""})
     }
 
 
     return (
         <div className="login-form">
-            <p>{dataContext.currentUser}</p>
         <form onSubmit={handleSubmit}>
             <input type="text"
                 value={login.username}

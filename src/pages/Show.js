@@ -28,57 +28,63 @@ function Show(props) {
     }, [])
 
 
-    // const LinkWrapper = ({ link }) => {
-    //     const [show, setShow] = useState(false);
-    //     const handleClose = () => setShow(false);
-    //     const handleShow = () => setShow(true);
+    const LinkWrapper = ({ link }) => {
+        const [show, setShow] = useState(false);
+        const handleClose = () => setShow(false);
+        const handleShow = () => setShow(true);
 
+    const url = new URL(newAnime.trailer.embed_url)
+    console.log(url)
+        return (
+            <>
+                <Button variant="primary" onClick={handleShow}>
+                    {/* Play Trailer */}
+                    <img className="yt-icon" src="https://i.imgur.com/nhvu18j.png"></img>
+                </Button>
 
+                <Modal show={show} onHide={handleClose}>
+                    <Modal.Title>{newAnime.title}</Modal.Title>
+                    <Modal.Body><iframe src={link} style={{ width: '100%', height: '400px' }} /></Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={handleClose}>
+                            Close
+                        </Button>
+                    </Modal.Footer>
+                </Modal>
 
-    // const url = new URL(link)
-    // console.log(url)
-    //     return (
-    //         <>
-    //             <Button variant="primary" onClick={handleShow}>
-    //                 {/* Play Trailer */}
-    //                 <img className="yt-icon" src="https://i.imgur.com/nhvu18j.png"></img>
-    //             </Button>
+            </>
+        );
+        }
 
-    //             <Modal show={show} onHide={handleClose}>
-    //                 <Modal.Title>{anime[id - 1].title}</Modal.Title>
-    //                 <Modal.Body><iframe src={link} style={{ width: '100%', height: '400px' }} /></Modal.Body>
-    //                 <Modal.Footer>
-    //                     <Button variant="secondary" onClick={handleClose}>
-    //                         Close
-    //                     </Button>
-    //                 </Modal.Footer>
-    //             </Modal>
+        // const LinkWrapper = ({ link }) => {
+        //     const [show, setShow] = useState(false);
+        //     const handleClose = () => setShow(false);
+        //     const handleShow = () => setShow(true);
+    
+           
 
-    //         </>
-    //     );
-
-    //     const url = new URL(newAnime.trailer.embed_url)
-    //     console.log(url)
-    //         return (
-    //             <>
-    //                 <Button variant="primary" onClick={handleShow}>
-    //                     Play Trailer
-    //                 </Button>
-
-    //                 <Modal show={show} onHide={handleClose}>
-    //                     <Modal.Title>{newAnime.title}</Modal.Title>
-    //                     <Modal.Body><iframe src={link} style={{ width: '100%', height: '400px' }} /></Modal.Body>
-    //                     <Modal.Footer>
-    //                         <Button variant="secondary" onClick={handleClose}>
-    //                             Close
-    //                         </Button>
-    //                     </Modal.Footer>
-    //                 </Modal>
-    //             </>
-    //         );
-    // }
-
-
+        // const url = new URL(newAnime.trailer.embed_url)
+        // console.log(url)
+        //     return (
+        //         <>
+        //             <Button variant="primary" onClick={handleShow}>
+        //                 {/* Play Trailer */}
+        //                 <img className="yt-icon" src="https://i.imgur.com/nhvu18j.png"></img>
+        //             </Button>
+    
+        //             <Modal show={show} onHide={handleClose}>
+        //                 <Modal.Title>{newAnime.title}</Modal.Title>
+        //                 <Modal.Body><iframe src={link} style={{ width: '100%', height: '400px' }} /></Modal.Body>
+        //                 <Modal.Footer>
+        //                     <Button variant="secondary" onClick={handleClose}>
+        //                         Close
+        //                     </Button>
+        //                 </Modal.Footer>
+        //             </Modal>
+    
+        //         </>
+        //     );
+        //     }
 
     const loading = () => {
         return (
@@ -103,7 +109,7 @@ function Show(props) {
                     <h3>{newAnime.rating}</h3>
 
                     <p>{newAnime.synopsis}</p>
-
+                    {LinkWrapper(link)}
                     <Reviews id={id} />
                 </div>
                 )

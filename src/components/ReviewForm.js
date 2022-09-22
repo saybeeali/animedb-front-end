@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { DataContext} from '../data/DataContext';
 
 
 function ReviewForm(props){
     const [reviewState,setReviewState] = useState('');
-
-
+    const user = useContext(DataContext);
+console.log(user)
 
     const handleChange = event => {
         setReviewState(event.target.value);
