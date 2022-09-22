@@ -5,7 +5,7 @@ import { HOSTNAME } from "../environment";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Reviews from "../components/Reviews";
-
+import Footer from "../components/Footer";
 
 function Show(props) {
 
@@ -104,7 +104,7 @@ function Show(props) {
 
                     <p>{newAnime.synopsis}</p>
 
-                    <Reviews id={id} />
+                    {/* <Reviews id={id} /> */}
                 </div>
                 )
             }
@@ -135,7 +135,7 @@ function Show(props) {
                 
     
                     
- 
+                 <Footer />
     //down here we'll change anime to {either newAnime or thisAnime}
     console.log(Object.keys(newAnime))
     return (
