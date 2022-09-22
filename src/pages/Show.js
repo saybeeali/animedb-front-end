@@ -7,9 +7,9 @@ import { useState, useEffect } from "react";
 import Reviews from "../components/Reviews";
 import Footer from "../components/Footer";
 
-function Show(props) {
+function Show() {
 
-    const { id } = useParams()
+    const  {id} = useParams()
     const [newAnime, setNewAnime] = useState([])
     const thisAnimeURL = `https://animedb-back-end.herokuapp.com/anime/${id}`
 
@@ -18,22 +18,32 @@ function Show(props) {
 
     useEffect(() => {
         fetch(thisAnimeURL)
-            .then((res) => res.json())
-            .then((json) => {
-
-                setNewAnime(json)
-
-            })
-            .catch(console.error)
+        .then((res) => res.json())
+        .then((json) => {
+        
+            setNewAnime(json)
+           
+        })
+        .catch(console.error)
     }, [])
-
+ 
 
     // const LinkWrapper = ({ link }) => {
     //     const [show, setShow] = useState(false);
     //     const handleClose = () => setShow(false);
     //     const handleShow = () => setShow(true);
 
+    
+        // const url = new URL(link)
+        // console.log(url)
+        //     return (
+        //         <>
+        //             <Button variant="primary" onClick={handleShow}>
+        //                 {/* Play Trailer */}
+        //                 <img className="yt-icon" src="https://i.imgur.com/nhvu18j.png"></img>
+        //             </Button>
 
+<<<<<<< HEAD
 
     // const url = new URL(link)
     // console.log(url)
@@ -111,6 +121,22 @@ function Show(props) {
 
 
             //{ //     const url = new URL(newAnime.trailer.embed_url)
+=======
+        //             <Modal show={show} onHide={handleClose}>
+        //                 <Modal.Title>{anime[id - 1].title}</Modal.Title>
+        //                 <Modal.Body><iframe src={link} style={{ width: '100%', height: '400px' }} /></Modal.Body>
+        //                 <Modal.Footer>
+        //                     <Button variant="secondary" onClick={handleClose}>
+        //                         Close
+        //                     </Button>
+        //                 </Modal.Footer>
+        //             </Modal>
+                    
+        //         </>
+        //     );
+            
+            //     const url = new URL(newAnime.trailer.embed_url)
+>>>>>>> 42173dee8d8fcee5ed70d764b6c5d9db4f6e7a06
             //     console.log(url)
             //         return (
                 //             <>
@@ -130,22 +156,53 @@ function Show(props) {
                 //             </>
                 //         );
                 // }
-                 //}
                 
                 
-    
+                
+                const loading = () => (
                     
+<<<<<<< HEAD
                  <Footer />
+=======
+                    <h1>loading</h1>
+                    
+                    )
+                    
+                    const loaded = () => {
+                        
+                        //const link = anime[id - 1].trailer
+                        
+                        //will have to adjust these keys based on the actual returned object
+                        return (
+                            <div>
+            <div className="show">
+            
+            
+            <img src= {newAnime.images.jpg.image_url}/>
+            <h1>{newAnime.title}</h1>
+            <h2>{newAnime.title_japanese}</h2>
+            <h3>{newAnime.rating}</h3>
+                 
+                 <p>{newAnime.synopsis}</p>
+                 
+                    <Reviews/>
+            </div>
+            </div>
+        )
+        
+    }
+>>>>>>> 42173dee8d8fcee5ed70d764b6c5d9db4f6e7a06
     //down here we'll change anime to {either newAnime or thisAnime}
     console.log(Object.keys(newAnime))
     return (
         <>
             {newAnime && Object.keys(newAnime).length ? loaded() : loading()}
-        </>
-
-    );
-
-
-}
-
-export default Show;
+            </>
+        
+        );
+        
+        
+    }
+        
+        export default Show;
+        

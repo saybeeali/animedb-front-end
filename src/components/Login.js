@@ -4,9 +4,7 @@ import { DataContext} from '../data/DataContext';
 function Login() {
 
     const dataContext = useContext(DataContext);
-
     const [login, setLogin] = useState({ username: "", password: "" });
-    
     const handleChange = (e) => {
         setLogin({ ...login, [e.target.name]: e.target.value });
     }
