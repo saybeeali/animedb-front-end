@@ -102,7 +102,7 @@ function Show(props) {
                  
                  <p>{newAnime.synopsis}</p>
                  
-                    <Reviews id = {id}/>
+                    <Reviews/>
             </div>
             </div>
         )
