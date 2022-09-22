@@ -9,26 +9,57 @@ function Reviews(props) {
 
     const thisAnimeURL =`https://animedb-back-end.herokuapp.com/anime/${props.id}`
 
-    useEffect(() => {
-        fetch(thisAnimeURL)
-        .then((res) => res.json())
-        .then((json) => {
-            console.log(json)
-            setReviews(json)
-        })
-        .catch(console.error)
-    }, [])
+    
+    const getReviews = async () => {
+        try {
+            const response = await fetch(thisAnimeURL)
+            const allReviews = await response.json()
+            setReviews(allReviews.reviews)
+        } catch (err) {
+            console.log(err)
+        }
+    }
+
+    useEffect(() => {getReviews()}, [])
+
+    // useEffect(() => {
+    //     fetch(thisAnimeURL)
+    //     .then((res) => res.json())
+    //     .then((json) => {
+    //         console.log(json)
+    //         setReviews(json.reviews)
+    //         console.log(json.reviews)
+    //     })
+    //     .catch(console.error)
+    // }, [])
   
 
-    function addReview(data) {
-        setReviews([reviews,data])
-    }
+    // function addReview(data) {
+    //     setReviews([reviews,data])
+    // }
     //i think this will only work locally. we need to add it to the backend
+
+    //add reviews  to backend
+
+    const createReview = async (reviewData) =>  {
+        try {
+            const newReview = await fetch(thisAnimeURL, {
+                method: "post",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(reviewData)
+            })
+            getReviews()
+        } catch (err) {
+            console.log(err)
+        }
+    };
 
     return (
         <div className='Reviews'>
             <h1>Reviews</h1>
-                <ReviewForm addReview={addReview}/>
+                <ReviewForm />
             
             
             <main><ReviewList reviews={reviews} /></main>
