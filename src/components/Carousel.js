@@ -10,8 +10,8 @@ function CarouselFadeExample() {
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3>Hunter X Hunter</h3>
-          <p>Gon Freecss aspires to become a Hunter, an exceptional being capable of greatness. With his friends and his potential, he seeks out his father, who left him when he was younger.</p>
+          <h3 className='carousel-text'>Hunter X Hunter</h3>
+          <p className='carousel-text'>Gon Freecss aspires to become a Hunter, an exceptional being capable of greatness. With his friends and his potential, he seeks out his father, who left him when he was younger.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -22,8 +22,8 @@ function CarouselFadeExample() {
         />
 
         <Carousel.Caption>
-          <h3>Attack On Titan</h3>
-          <p>After his hometown is destroyed and his mother is killed, young Eren Jaeger vows to cleanse the earth of the giant humanoid Titans that have brought humanity to the brink of extinction.</p>
+          <h3 className='carousel-text'>Attack On Titan</h3>
+          <p className='carousel-text'>After his hometown is destroyed and his mother is killed, young Eren Jaeger vows to cleanse the earth of the giant humanoid Titans that have brought humanity to the brink of extinction.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -34,8 +34,8 @@ function CarouselFadeExample() {
         />
 
         <Carousel.Caption>
-          <h3>Initial D</h3>
-          <p>The story of a young delivery boy who becomes a drift-racing legend.</p>
+          <h3 className='carousel-text'>Initial D</h3>
+          <p className='carousel-text'>The story of a young delivery boy who becomes a drift-racing legend.</p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
