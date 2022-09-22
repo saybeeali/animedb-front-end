@@ -10,23 +10,12 @@ import {Routes, Route, Outlet} from "react-router-dom"
 import Intro from './pages/Intro';
 
 import { DataContext } from './data/DataContext';
-import {useState, useEffect} from "react"
+import {useState} from "react"
 
 
 function App(props) {
-
   const [currentUser, setCurrentUser] = useState(null)
-
-  useEffect(() => {
-    setCurrentUser(window.localStorage.getItem('currentUser'));
-  }, []);
-
-  useEffect(() => {
-    window.localStorage.setItem('currentUser', currentUser);
-  }, [currentUser]);
-
- //console.log(currentUser)
-
+ console.log(currentUser)
   return (
     <div className="App">
       <DataContext.Provider value={[currentUser, setCurrentUser]}>
@@ -42,7 +31,7 @@ function App(props) {
           </div>
         </header>
         <Routes>
-        <Route exact path="/" element={<Intro currentUser = {currentUser} setCurrentUser = {setCurrentUser}/> }/>
+        <Route exact path="/" element={<Intro/>}/>
         </Routes>
         <div className='carousel container-fluid'>
                 <Carousel/> 
