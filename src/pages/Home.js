@@ -40,30 +40,31 @@ useEffect(() => {
 
 
 //down here change animeList to newAnimeList or allAnime
-    return (
+return (
 
-      <div className="Home">
-      {/* <div className="row row-cols-1 row-cols-md-4 g-4"> */}
-        <section className="container">
-            {newAnimeList.map((anime,id)=>{
-                // anime._id=id
-                return (
-                    <Link to= {`/anime/${anime._id}` }>
-                    <div className="anime-card">
-                        <h4>{anime.title}</h4>
-                        
-                    <img src= {anime.images.jpg.image_url}/>
-                    </div>
-                    </Link>
-                )
-            }
-            )}
-        </section>
-   
-        {newAnimeList && newAnimeList.length ? loaded() : loading()}
-      </div>
-    //   </div>
-    );
+    <div className="Home">
+    {/* <div className="row row-cols-1 row-cols-md-4 g-4"> */}
+    <h1>Anime Library</h1>
+      <section className="container">
+          {newAnimeList.map((anime,id)=>{
+              // anime._id=id
+              return (
+                  <Link to= {`/anime/${anime._id}` }>
+                  <div className="anime-card">
+                      <h4>{anime.title}</h4>
+                      
+                  <img src= {anime.images.jpg.image_url}/>
+                  </div>
+                  </Link>
+              )
+          }
+          )}
+      </section>
+ 
+      {newAnimeList && newAnimeList.length ? loaded() : loading()}
+    </div>
+  //   </div>
+  );
 }
   
   export default Home;

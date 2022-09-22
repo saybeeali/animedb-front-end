@@ -1,0 +1,89 @@
+@font-face {
+    font-family: "Nabla";
+    src: local("Nabla"),
+    url("./fonts/Nabla/Nabla-Regular.ttf") format("truetype"); 
+    }
+    @font-face {
+      font-family: "SecularOne";
+      src: local("SecularOne"),
+      url("./fonts/Secular_One/SecularOne-Regular.ttf") format("truetype"); 
+      }
+      body {
+        text-align: center;
+        background-color: rgba(0, 4, 21, 0.878);
+        
+      }
+      .Home {
+        background-color: rgba(0, 4, 21, 0.878);
+      }
+      .show {
+        background-color: rgba(0, 4, 21, 0.878);
+        text-align: center;
+      }
+      .anime-info{
+        color:orange
+      }
+      .title-info{
+        color:dimgrey
+      }
+      h1{
+        color:aliceblue
+      }
+      .container {
+        border:10px solid rgb(1, 1, 53);
+        display:flex;
+        flex-wrap: wrap;
+      }
+      .anime-card {
+        border:5px solid whitesmoke;
+        margin:10px;
+        width:17rem;
+      
+      }
+      
+      
+      .header {
+        
+        
+        color: rgb(231, 226, 200);
+        background-color: rgba(0, 0, 0, .8);
+        padding:10px;
+       
+      }
+      .logo{
+        display: flex;
+        flex-direction: row;
+        font-family: Nabla;
+        margin-left: 20px;
+        margin-top: 15px;
+        cursor: pointer;
+        font-size: 28px;
+      }
+      .logo-Header{
+        display: flex;
+      }
+      /* .library {
+        margin-left: 50px;
+      } */
+      .intro{
+        background-color: coral;
+      }
+
+      .carousel{
+        height: 500px;
+        color: rgb(22, 22, 22);
+      }
+      
+      .intro-wrapper{
+        height: 100vh;
+        background-color: rgba(0, 0, 0, .9)  ;
+      }
+      .login-wrapper{
+        align-content: center;
+        display: flex;
+        justify-content: center;
+      }
+      .welcome{
+        text-align: center;
+        color: orange;
+      }
