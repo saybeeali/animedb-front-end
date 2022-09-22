@@ -14,8 +14,11 @@ import {useState} from "react"
 
 
 function App(props) {
+
   const [currentUser, setCurrentUser] = useState(null)
+
  console.log(currentUser)
+ 
   return (
     <div className="App">
       <DataContext.Provider value={[currentUser, setCurrentUser]}>
