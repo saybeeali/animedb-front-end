@@ -98,7 +98,9 @@ function Show() {
             <img src= {newAnime.images.jpg.image_url}/>
             <h1>{newAnime.title}</h1>
             <h2>{newAnime.title_japanese}</h2>
+            <iframe src={newAnime.trailer.embed_url} width = '400' height ='300'/>
             <h3>{newAnime.rating}</h3>
+
                  
                  <p>{newAnime.synopsis}</p>
                  
