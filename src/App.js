@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import Show from './pages/Show';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
-// import './App.css';
+import LoginButton from './components/LoginButton';
 import './Test.css';
 import {Routes, Route, Outlet} from "react-router-dom"
 
@@ -18,12 +18,12 @@ function App(props) {
 
   const [currentUser, setCurrentUser] = useState(null)
 
- console.log(currentUser)
+console.log(currentUser)
  
   return (
     <div className="App">
       <DataContext.Provider value={[currentUser, setCurrentUser]}>
-      <header className='header'><Header/></header>
+      <header className='header'><Header/> </header>
       <Routes>
 
           <Route exact path="/home" element={<Home/>}/>
