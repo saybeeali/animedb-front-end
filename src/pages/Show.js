@@ -94,6 +94,9 @@ function Show(props) {
 
     const loaded = () => {
 
+        //this below should be how it works. however, it seems unable to grab 
+        //these properties even after newAnime is loaded 
+
         const link = newAnime.trailer.embed_url
 
         //will have to adjust these keys based on the actual returned object
