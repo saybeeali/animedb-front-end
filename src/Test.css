@@ -110,12 +110,12 @@ h1{
         border: none;
         height: 32px;
       }
-      .header-btn {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        margin-top: -40px;
-        margin-right: 100px;
+.header-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: -40px;
+  margin-right: 100px;
 }
 .intro-text {
   display: flex;
@@ -135,4 +135,7 @@ a {
 .carousel-text{
   color: orange;
 }
-
+.login-page-btn{
+  color: black;
+  background-color: orange;
+}
