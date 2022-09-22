@@ -27,13 +27,12 @@ function Show(props) {
             .catch(console.error)
     }, [])
 
-
     const LinkWrapper = ({ link }) => {
         const [show, setShow] = useState(false);
         const handleClose = () => setShow(false);
         const handleShow = () => setShow(true);
 
-    const url = new URL(newAnime.trailer.embed_url)
+    const url = new URL(link)
     console.log(url)
         return (
             <>
@@ -95,7 +94,7 @@ function Show(props) {
 
     const loaded = () => {
 
-        //const link = anime[id - 1].trailer
+        const link = newAnime.trailer.embed_url
 
         //will have to adjust these keys based on the actual returned object
         return (
@@ -109,7 +108,7 @@ function Show(props) {
                     <h3>{newAnime.rating}</h3>
 
                     <p>{newAnime.synopsis}</p>
-                    {LinkWrapper(link)}
+                    {LinkWrapper({link})}
                     <Reviews id={id} />
                 </div>
                 )
@@ -143,7 +142,7 @@ function Show(props) {
                     
  
     //down here we'll change anime to {either newAnime or thisAnime}
-    console.log(Object.keys(newAnime))
+    //console.log(Object.keys(newAnime))
     return (
         <>
             {newAnime && Object.keys(newAnime).length ? loaded() : loading()}

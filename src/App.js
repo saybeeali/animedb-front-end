@@ -25,7 +25,7 @@ function App(props) {
     window.localStorage.setItem('currentUser', currentUser);
   }, [currentUser]);
 
- console.log(currentUser)
+ //console.log(currentUser)
 
   return (
     <div className="App">
