@@ -15,15 +15,15 @@ function Intro(){
             <p className="welcome">Welcome</p>
         )
     }
-  
+
     const yesUser = () => {
-            return (
-              <div className="loginField">
+        return (
+            <div className="loginField">
                 <p className="currentUser-display"> Welcome {user}</p>
-              </div>
+            </div>
         )
         //console.log(dataContext[0])
-      }
+}
 
     return(
         <div className="intro-wrapper">
