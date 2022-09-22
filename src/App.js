@@ -26,7 +26,7 @@ function App(props) {
               <Header/>
             </div>
             <div className='col-lg'>
-              {/* <Nav /> */}
+              {/*<Nav />*/}
             </div>
           </div>
         </header>

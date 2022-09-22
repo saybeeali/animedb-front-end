@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 import Reviews from "../components/Reviews";
 
 
-function Show() {
+function Show(props) {
 
     const  {id} = useParams()
     const [newAnime, setNewAnime] = useState([])
@@ -102,7 +102,7 @@ function Show() {
                  
                  <p>{newAnime.synopsis}</p>
                  
-                    <Reviews/>
+                    <Reviews id = {id}/>
             </div>
             </div>
         )
