@@ -1,0 +1,128 @@
+@font-face {
+  font-family: "Nabla";
+  src: local("Nabla"),
+  url("./fonts/Nabla/Nabla-Regular.ttf") format("truetype"); 
+}
+@font-face {
+  font-family: "SecularOne";
+  src: local("SecularOne"),
+  url("./fonts/Secular_One/SecularOne-Regular.ttf") format("truetype"); 
+}
+body {
+  text-align: center;
+  background-color: rgba(0, 4, 21, 0.878); 
+}
+.Home {
+  background-color: rgba(0, 4, 21, 0.878);
+}
+.show {
+  background-color: rgba(0, 4, 21, 0.878);
+  text-align: center;
+}
+      .anime-info{
+        color:orange
+      }
+      .title-info{
+        color:dimgrey
+      }
+      h1{
+        color:aliceblue
+      }
+      .container {
+        /* border:10px solid rgb(1, 1, 53); */
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .anime-card {
+        /* border:5px solid whitesmoke; */
+        margin:10px;
+        width:17rem;
+      
+      }
+
+      .icons {
+        height: 50px;
+        margin-top: -25px;
+        
+      }
+      
+      .header {
+        color: rgb(231, 226, 200);
+        background-color: rgba(0, 0, 0, .8);
+        padding:10px;
+        height: 75px;
+      }
+      .logo{
+        display: flex;
+        flex-direction: row;
+        font-family: Nabla;
+        margin-left: 20px;
+        margin-top: 10px;
+        cursor: pointer;
+        font-size: 28px;
+      }
+      .logo-Header{
+        display: flex;
+      }
+      /* .library {
+        margin-left: 50px;
+      } */
+      .intro{
+        background-color: coral;
+      }
+
+      .carousel{
+        height: 500px;
+        color: rgb(22, 22, 22);
+      }
+      p {
+        color: whitesmoke;
+      }
+      .intro-wrapper{
+        height: 100vh;
+        background-color: rgba(0, 0, 0, .9)  ;
+      }
+      .login-wrapper{
+        align-content: center;
+        display: flex;
+        justify-content: center;
+      }
+      .welcome{
+        text-align: center;
+        color: orange;
+      }
+      h4{
+        color: orange;
+        text-align: center;
+      }
+      .home-text {
+        margin-left: 50px;
+      }
+      .text-bottom-border {
+        border-bottom:1px solid rgba(255, 255, 255, .2);
+      }
+      h1 {
+        color: orange;
+      }
+      button {
+        width: 200px;
+        color: whitesmoke;
+        background-color:  grey;
+        border: none;
+        height: 30px;
+      }
+      .header-btn {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-top: -40px;
+        margin-right: 100px;
+}
+.intro-text {
+  margin-left: 75px;
+  margin-top: 100px;
+}
+.watch-icon {
+  margin-right: 15px;
+}

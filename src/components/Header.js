@@ -1,12 +1,13 @@
 // import Carousel from "./Carousel";
 import Nav from "./Nav";
-
+import LoginButton from "./LoginButton";
 
 function Header() {
 return (
         <div className="Header">
-                <a className="hover-overlay" href="/" alt="home"><h1 className="logo">AnimeDB</h1></a>
-        {/* <Nav/> */}
+                <a href="/home" alt="home"><h1 className="logo">AnimeDB</h1></a>
+                <LoginButton />
+                
         </div>
 );
 }

@@ -1,14 +1,14 @@
 
-import {useState, useEffect} from "react"
+import {useState, useEffect, useContext} from "react"
+import { DataContext} from '../data/DataContext';
 import Login from "./Login"
 // import '../App.css';
 //need to create a user log in somewhere (should it be here or a separate page?)
 //either way, create a user login component and register component
 
-function Nav(props) {
+function Nav() {
 
-
-  const [currentUser, setCurrentUser] = useState(null)
+  const [user, setUser] = useContext(DataContext);
 
   const backEndURL = ""
 
@@ -17,7 +17,7 @@ function Nav(props) {
           const response = await fetch(backEndURL)
           //console.log(response)
           const thisUser = await response.json()
-          setCurrentUser(thisUser)
+          //dataContext.setCurrentUser(thisUser)
       } catch (err) {
           //console.log(err)
       }
@@ -32,20 +32,20 @@ useEffect(() => {getUser()}, [])
       )
   }
 
-  const user = (props) => {
+  const yesUser = () => {
           return (
             <div className="loginField">
-              <p className="currentUser-display"> Welcome {currentUser}</p>
+              <p className="currentUser-display"> Welcome {user}</p>
             </div>
       )
-      console.log(currentUser)
+      //console.log(dataContext[0])
     }
     
     
     return (
       <div className="currentUser-greeting">
-      <Login setCurrentUser = {setCurrentUser}/>
-      {currentUser ? user() : user()}
+      <Login  />
+      {user ? yesUser() : noUser()}
     </div>
   );
 }

@@ -1,11 +1,16 @@
-import {useState} from "react"
+import {useState, useEffect, useContext} from "react"
+import { DataContext} from '../data/DataContext';
+
 
 function CommentForm(props) {
+  const dataContext = useContext(DataContext);
 
     const [newForm, setNewForm] = useState({
-        username: "",
+        username: {dataContext},
         content: "",
       });
+
+      console.log(dataContext)
 
     
       const addComment = async (commentData) => {
@@ -27,6 +32,12 @@ function CommentForm(props) {
         setNewForm({...newForm, [e.target.name]: e.target.value});
       };
     
+      const testHandleSubmit = (e) => {
+        e.preventDefault()
+        const newComment = newForm
+        setNewForm({username: "", content: ""})
+      }
+
       const handleSubmit = async (e) => {
         e.preventDefault()
         const newComment = await addComment(newForm)
@@ -36,6 +47,7 @@ function CommentForm(props) {
     return (
       <div className="CommentForm">
         <h3>Add a comment</h3>
+
         <form onSubmit={handleSubmit}>
             <input
                 type="hidden"
@@ -44,16 +56,21 @@ function CommentForm(props) {
                 placeholder="username"
                 onChange={handleChange}
             />
+          </form>
+
+        <form onSubmit={testHandleSubmit}>
                <input
+
                 type="text"
                 value={newForm.content}
                 name="content"
                 onChange={handleChange}
             />
-            <button type="submit">Add Comment</button>
+            <button className="comment-btn" type="submit">Add Comment</button>
         </form>
       </div>
     );
+    console.log(newForm)
   }
   
   export default CommentForm;
