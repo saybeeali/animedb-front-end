@@ -101,14 +101,17 @@ h1{
         text-align: center;
       }
       .home-text {
-        margin-left: 105px;
-        
+        /* margin-left: 105px; */
+        text-align: center;
       }
       .text-bottom-border {
         /* border-bottom:1px solid rgba(255, 255, 255, .2); */
         /* box-shadow: 1px 2px; */
         height: 65px;
-        background-color: rgba(0, 4, 21, 0.878)
+        /* background-color: rgba(0, 4, 21, 0.878); */
+        text-align: center;
+        font-family: SecularOne;
+        
       }
       h1 {
         color: orange;
