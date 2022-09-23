@@ -42,12 +42,13 @@ h1{
 
 .icons {
   /* display: flex; */
-  /* flex-direction: row; */
+  flex-direction: row;
   height: 50px;
   margin-top: -35px;
-  margin-left: 90px;
+  margin-left: 60px;
   /* align-self: center; */
   text-align: center;
+  align-self: start;
 
 }
       .header {

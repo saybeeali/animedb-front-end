@@ -1,7 +1,7 @@
 function Footer() {
     return(
         <footer className='footer container-fluid'> 
-        <p className="footer-txt">A SETD Production - est.2022</p>
+        <p className="footer-txt">A     S-E-T-D Production - est.2022</p>
         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img className="icons " src="https://i.imgur.com/DAoLUZT.png"></img></a> 
         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img className="icons " src="https://i.imgur.com/2xQcEyZ.png"></img></a>
         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img className="icons " src="https://i.imgur.com/hGHDoGh.png"></img></a>

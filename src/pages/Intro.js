@@ -36,11 +36,11 @@ function Intro(){
             <div className="intro-text">
             <p className="p-text">
             <img className="watch-icon" src="https://i.imgur.com/fs7axax.png"></img>
-            Find Your Favorite Anime 
+            Search Your Favorite Anime 
             </p>
             <p className="p-text2">
-                <img className="watch-icon" src="https://i.imgur.com/qZ7IMT7.png"></img>
-            Leave A Review
+                <img className="watch-icon" src="https://i.imgur.com/6YxJjL3.png"></img>
+            Leave A Review For The AnimeDB community
             </p>
             </div>
         </div>
