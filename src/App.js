@@ -1,10 +1,7 @@
 import Header from './components/Header';
-import Carousel from './components/Carousel';
 import Home from './pages/Home';
 import Show from './pages/Show';
-import Nav from './components/Nav';
-import Footer from './components/Footer';
-import LoginButton from './components/LoginButton';
+
 import './Test.css';
 import {Routes, Route, Outlet} from "react-router-dom"
 

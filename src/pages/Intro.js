@@ -15,15 +15,15 @@ function Intro(){
             <p className="welcome">Welcome</p>
         )
     }
-  
+
     const yesUser = () => {
-            return (
-              <div className="loginField">
+        return (
+            <div className="loginField">
                 <p className="currentUser-display"> Welcome {user}</p>
-              </div>
+            </div>
         )
         //console.log(dataContext[0])
-      }
+}
 
     return(
         <div className="intro-wrapper">
@@ -36,7 +36,11 @@ function Intro(){
             <div className="intro-text">
             <p className="p-text">
             <img className="watch-icon" src="https://i.imgur.com/fs7axax.png"></img>
-            Find Your Favorite Anime 
+            Search Your Favorite Anime 
+            </p>
+            <p className="p-text2">
+                <img className="watch-icon" src="https://i.imgur.com/6YxJjL3.png"></img>
+            Leave A Review For The AnimeDB community
             </p>
             </div>
         </div>
