@@ -1,8 +1,10 @@
 import { useState, useEffect, useContext } from "react"
 import { DataContext} from '../data/DataContext';
+import {useNavigate} from "react-router-dom"
 
 function Login() {
 
+    const navigate = useNavigate()
     const dataContext = useContext(DataContext);
     const [login, setLogin] = useState({ username: "", password: "" });
     const handleChange = (e) => {
@@ -15,7 +17,6 @@ function Login() {
         console.log(dataContext)
         setLogin({username: "", password: ""})
     }
-
 
     return (
         <div className="login-form">
@@ -33,7 +34,7 @@ function Login() {
                 placeholder="password"
                 onChange={handleChange}
                 />
-            <button type="submit" value="Login">Login</button>
+            <button type="submit" onClick={() => navigate("/home")} value="Login">Login</button>
         </form>
         </div>
     );
