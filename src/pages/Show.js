@@ -5,9 +5,9 @@ import { HOSTNAME } from "../environment";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Reviews from "../components/Reviews";
+import Footer from "../components/Footer";
 
-
-function Show(props) {
+function Show() {
 
     const  {id} = useParams()
     const [newAnime, setNewAnime] = useState([])
@@ -98,11 +98,13 @@ function Show(props) {
             <img src= {newAnime.images.jpg.image_url}/>
             <h1>{newAnime.title}</h1>
             <h2>{newAnime.title_japanese}</h2>
+            <iframe src={newAnime.trailer.embed_url} width = '400' height ='300'/>
             <h3>{newAnime.rating}</h3>
+
                  
                  <p>{newAnime.synopsis}</p>
                  
-                    <Reviews id = {id}/>
+                    <Reviews/>
             </div>
             </div>
         )
