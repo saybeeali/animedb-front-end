@@ -8,6 +8,11 @@
   src: local("SecularOne"),
   url("./fonts/Secular_One/SecularOne-Regular.ttf") format("truetype"); 
 }
+@font-face {
+  font-family: "Hirakatana";
+  src: local("Hirakatana"),
+  url("./fonts/hirakatana-font/Hirakatana-dpJX.ttf") format("truetype"); 
+}
 body {
   text-align: center;
   background-color: rgba(0, 4, 21, 0.878); 
@@ -103,6 +108,7 @@ h1{
       .home-text {
         /* margin-left: 105px; */
         text-align: center;
+        font-family: Hirakatana;
       }
       .text-bottom-border {
         /* border-bottom:1px solid rgba(255, 255, 255, .2); */
