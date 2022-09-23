@@ -1,6 +1,4 @@
-import AnimeCard from "../components/AnimeCard";
-
-import Carousel from "../components/Carousel";
+import Footer from "../components/Footer";
 
 import { Link } from "react-router-dom";
 
@@ -60,7 +58,7 @@ return (
     }
 )}
     </section>
-
+    <Footer />
         {newAnimeList && newAnimeList.length ? loaded() : loading()}
     </div>
   //   </div>

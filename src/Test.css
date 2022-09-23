@@ -41,13 +41,18 @@ h1{
 }
 
 .icons {
+  /* display: flex; */
+  /* flex-direction: row; */
   height: 50px;
-  margin-top: -25px;
+  margin-top: -35px;
+  margin-left: 90px;
+  /* align-self: center; */
+  text-align: center;
 
 }
       .header {
         color: rgb(231, 226, 200);
-        background-color: rgba(0, 0, 0, .8);
+        background-color: rgba(0, 0, 0, .9);
         padding:10px;
         height: 75px;
       }
@@ -95,10 +100,14 @@ h1{
         text-align: center;
       }
       .home-text {
-        margin-left: 50px;
+        margin-left: 105px;
+        
       }
       .text-bottom-border {
-        border-bottom:1px solid rgba(255, 255, 255, .2);
+        /* border-bottom:1px solid rgba(255, 255, 255, .2); */
+        /* box-shadow: 1px 2px; */
+        height: 65px;
+        background-color: rgba(0, 4, 21, 0.878)
       }
       h1 {
         color: orange;
@@ -116,6 +125,7 @@ h1{
   justify-content: flex-end;
   margin-top: -40px;
   margin-right: 100px;
+
 }
 .intro-text {
   display: flex;
@@ -128,6 +138,9 @@ h1{
 .watch-icon {
   margin-right: 15px;
 }
+.p-text2 {
+  margin-left: 100px;
+}
 
 a {
   text-align: center;
@@ -138,4 +151,14 @@ a {
 .login-page-btn{
   color: black;
   background-color: orange;
+}
+.footer {
+  /* display: flex;
+  flex-direction: row; */
+  border-top: 1px solid black;
+  background-color: rgb(7, 22, 36);
+  ;
+}
+.footer-txt{
+  text-align: center;
 }

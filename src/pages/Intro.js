@@ -38,9 +38,9 @@ function Intro(){
             <img className="watch-icon" src="https://i.imgur.com/fs7axax.png"></img>
             Find Your Favorite Anime 
             </p>
-            <p className="p-text">
+            <p className="p-text2">
                 <img className="watch-icon" src="https://i.imgur.com/qZ7IMT7.png"></img>
-            Leave A Comment
+            Leave A Review
             </p>
             </div>
         </div>
