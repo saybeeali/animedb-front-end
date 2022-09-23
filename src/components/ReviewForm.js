@@ -14,7 +14,7 @@ function ReviewForm(props){
             event.preventDefault();
          
           console.log(reviewState)
-          props.addReview(reviewState)
+          props.createReview(reviewState)
         }
         return(
             <div className="review-form">
@@ -24,7 +24,7 @@ function ReviewForm(props){
             <input 
             
             type='text'
-            requird name='review'
+            name='reviews'
             onChange={handleChange}
              value={reviewState}
             />

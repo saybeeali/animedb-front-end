@@ -16,15 +16,25 @@ function Show(props) {
     //once back end is deployed we can fill in the url
     //and use this function to fetch it
 
-    useEffect(() => {
+
+
+
+
+
+    const getAnime = () => {
         fetch(thisAnimeURL)
-            .then((res) => res.json())
-            .then((json) => {
 
-                setNewAnime(json)
+        .then((res) => res.json())
+        .then((json) => {
+        
+            setNewAnime(json)
+           
+        })
+        .catch(console.error)
+    }
+    useEffect(() => {
+       getAnime()
 
-            })
-            .catch(console.error)
     }, [])
 
 
@@ -136,6 +146,37 @@ function Show(props) {
                 
     
                     
+
+                    const loaded = () => {
+                        
+             
+                        
+                        const showReviews = newAnime.reviews.map((review) => {
+                            return (
+                                <p>{review.post}</p>
+                            )
+                        })
+                        return (
+                            <div>
+            <div className="show">
+            
+            
+            <img src= {newAnime.images.jpg.image_url}/>
+            <h1>{newAnime.title}</h1>
+            <h2>{newAnime.title_japanese}</h2>
+            <iframe src={newAnime.trailer.embed_url} width = '400' height ='300'/>
+            <h3>{newAnime.rating}</h3>
+
+                 
+                 <p>{newAnime.synopsis}</p>
+                 
+                    <Reviews getAnime={getAnime}/>
+                    {showReviews}
+            </div>
+            </div>
+        )
+        
+    }
 
     //down here we'll change anime to {either newAnime or thisAnime}
     console.log(Object.keys(newAnime))
