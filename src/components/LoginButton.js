@@ -5,7 +5,7 @@ function LoginButton(props){
     const navigate = useNavigate()
     return(
     <div className="header-btn">
-        <button className="login-page-btn" onClick={() => navigate("/")}>Anime Library</button>
+        <button className="login-page-btn" onClick={() => navigate("/home")}>Anime Library</button>
         </div>
     )
 }
