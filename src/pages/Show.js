@@ -16,7 +16,12 @@ function Show() {
     //once back end is deployed we can fill in the url
     //and use this function to fetch it
 
-    useEffect(() => {
+
+
+
+
+
+    const getAnime = () => {
         fetch(thisAnimeURL)
         .then((res) => res.json())
         .then((json) => {
@@ -25,6 +30,9 @@ function Show() {
            
         })
         .catch(console.error)
+    }
+    useEffect(() => {
+       getAnime()
     }, [])
  
 
@@ -89,7 +97,11 @@ function Show() {
                         
                         //const link = anime[id - 1].trailer
                         
-                        //will have to adjust these keys based on the actual returned object
+                        const showReviews = newAnime.reviews.map((review) => {
+                            return (
+                                <p>{review.post}</p>
+                            )
+                        })
                         return (
                             <div>
             <div className="show">
@@ -104,7 +116,8 @@ function Show() {
                  
                  <p>{newAnime.synopsis}</p>
                  
-                    <Reviews/>
+                    <Reviews getAnime={getAnime}/>
+                    {showReviews}
             </div>
             </div>
         )
