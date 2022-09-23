@@ -3,8 +3,6 @@ export default function ReviewItem(props){
     return(
         <div>
             <p>{props.review}</p>
-           
-
         </div>
     )
 }

@@ -22,7 +22,6 @@ function Intro(){
                 <p className="currentUser-display"> Welcome {user}</p>
             </div>
         )
-        //console.log(dataContext[0])
 }
 
     return(

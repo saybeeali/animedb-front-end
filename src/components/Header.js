@@ -1,5 +1,5 @@
 // import Carousel from "./Carousel";
-import Nav from "./Nav";
+
 import LoginButton from "./LoginButton";
 
 function Header() {

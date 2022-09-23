@@ -30,23 +30,18 @@ useEffect(() => {
     }
 
     const loaded = (props) => {
-    //     return newAnimeList.map((anime, idx) => {
-    //         return 
-    // })
+
 }
 
 
-//down here change animeList to newAnimeList or allAnime
 return (
 
     <div className="Home">
-    {/* <div className="row row-cols-1 row-cols-md-4 g-4"> */}
     <div className="text-bottom-border">
         <h1 className="home-text">Anime Library</h1>
     </div>
     <section className="container">
         {newAnimeList.map((anime,id)=>{
-              // anime._id=id
             return (
                 <Link to= {`/anime/${anime._id}` }>
                     <div className="anime-card">
@@ -71,7 +66,7 @@ return (
     <Footer />
         {newAnimeList && newAnimeList.length ? loaded() : loading()}
     </div>
-  //   </div>
+
 );
 }
 
