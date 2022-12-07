@@ -9,7 +9,7 @@ function Home(props) {
 
     const [newAnimeList, setNewAnimeList] = useState([])
 
-    const animeURL = "https://animedb-back-end.herokuapp.com/anime"
+    const animeURL = "https://animedb-back-end.fly.dev/anime"
 
 useEffect(() => {
     fetch(animeURL)
@@ -17,6 +17,7 @@ useEffect(() => {
     .then((json) => {
         console.log(json)
         setNewAnimeList(json)
+        console.log(newAnimeList)
     })
     .catch(console.error)
 }, [])
@@ -29,7 +30,7 @@ useEffect(() => {
         )
     }
 
-    const loaded = (props) => {
+    const loaded = () => {
 
 }
 

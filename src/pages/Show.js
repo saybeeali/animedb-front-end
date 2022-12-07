@@ -11,7 +11,7 @@ function Show(props) {
 
     const { id } = useParams()
     const [newAnime, setNewAnime] = useState([])
-    const thisAnimeURL = `https://animedb-back-end.herokuapp.com/anime/${id}`
+    const thisAnimeURL = `https://animedb-back-end.fly.dev/anime/${id}`
 
 
     const getAnime = () => {

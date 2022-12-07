@@ -24,3 +24,59 @@ show page styling
 
 carousel
 
+
+{/* <div className='wrapper'> */}
+        {/* <header className='header container-fluid text-center'>
+          <div className='row'>
+            <div className='col-sm'>
+              <Header/>
+            </div>
+            <div className='col-lg'>
+              {/* <Nav /> */}
+            {/* </div>
+          </div> */}
+        {/* // </header> */} 
+        {/* <Routes>
+       
+        </Routes> */}
+       <Header/>
+        {/* <div className='content container-fluid'> 
+          
+          <div className='animeList container-fluid'> */}
+          <Outlet/>
+        <Routes>
+
+          <Route exact path="/home" element={<Home/>}/>
+          <Route exact path="/" element={<Intro/>}/>
+
+          <Route exact path="/anime/:id" element={<Show/>}/>
+
+        </Routes>
+        {/* </div>
+        </div> */}
+        {/* <footer className='footer container-fluid'> 
+          <Footer />
+        </footer> */}
+      {/* </div> */}
+	  
+
+
+
+
+	  const animeUrl = 'https://animedb-back-end.herokuapp.com/anime'
+    const createReview = async (reviewData) => {
+        try {
+        const newReview = await fetch (animeUrl, {
+            method: "post", 
+            headers : {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(reviewData),
+        });
+        console.log(await newReview.json)
+        getReview()
+    } catch (err) {
+        console.log(err)
+    }
+};
+
